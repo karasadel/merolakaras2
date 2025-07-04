@@ -9,31 +9,35 @@ body {
 }
 
 .hero {
-  background-image: url('images/store-front.jpg'); /* غيّرها لو عندك صورة مختلفة */
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  color: white;
   text-align: center;
-  padding: 20px;
 }
 
-.hero .overlay {
+.hero-image {
+  width: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY(-50%);
+  color: white;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
   border-radius: 10px;
+  margin: 0 20px;
 }
 
-.hero h1 {
+.overlay h1 {
   font-size: 3em;
   margin-bottom: 10px;
 }
 
-.hero p {
+.overlay p {
   font-size: 1.4em;
 }
 
@@ -115,11 +119,11 @@ footer {
     font-size: 17px;
   }
 
-  .hero h1 {
+  .overlay h1 {
     font-size: 2em;
   }
 
-  .hero p {
+  .overlay p {
     font-size: 1.1em;
   }
 
